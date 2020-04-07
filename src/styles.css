@@ -1,1 +1,221 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background: #131313;
+
+}
+.hidden {
+	display: none;
+}
+header.logo{
+	background: black;
+	border: 1px solid black;
+	display: flex;
+	justify-content: space-between;
+}
+.logo img{
+	width: 250px;
+	height: 180px;
+	margin-top: -20px;
+	background: black;
+}
+.logo div{
+	margin: 10px 30px;
+}
+.auth-info {
+	padding: 10px 20px;
+	width:auto;
+	height: 120px;
+
+	text-align: right;
+	
+}
+.auth-info img {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+}
+.auth-info p {
+	margin-top: -5px;
+}
+.auth-info a{
+	color: white;
+}
+.auth-info a.enter, .auth-info a.auth{
+	color: white;
+	display: inline-block;
+	margin-left: 20px;
+	box-shadow: inset 0 1px 1px rgba(176, 33, 23, 0.8), inset 0 -1px 0px rgba(176, 33, 23, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
+	text-decoration: none;
+	border-radius: 20px;
+	padding: 10px;
+	transition: .8s;
+}
+.auth-info a.auth:hover, .auth-info a.enter:hover{
+	background: rgba(220, 40, 29, 1);
+}
+nav{
+	width:100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-evenly;
+	
+}
+nav div{
+	width: 25%;
+	min-width: 200px;
+	box-sizing: border-box;
+	border-right: 1px solid black;
+}
+a.text-menu{
+	display: block;
+	height: 60px;
+	position: relative;
+	text-align: center;
+	line-height: 60px;
+	font-size: 25px;
+	text-decoration: none;
+	color: white;
+	background: rgba(4, 4, 4, 0.7);
+	box-shadow: inset 0 1px 1px rgba(176, 33, 23, 0.8), inset 0 -1px 0px rgba(176, 33, 23, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
+    background-image: -webkit-linear-gradient(#000000, #161617);
+    background-image: -o-linear-gradient(#000000, #161617);
+    background-image: linear-gradient(#000000, #161617);
+    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 -1px 0 #311d47;
+}
+a.text-menu::before{
+	content: "";
+	position: absolute;
+	top:0;
+	right:0;
+	border: 10px solid transparent; 
+	border-top: 10px solid rgba(176, 33, 23, 1); 
+	border-right: 10px solid rgba(176, 33, 23, 1);
+	
+}
+
+section{
+	margin: 0 auto;
+	width: auto;
+	max-width: 700px;
+	
+	display: flex;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.content .main-content-forum{
+	width: 100%;
+	
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.main-content-forum .add-quest{
+	display: block;
+	width: 150px;
+	height: auto;
+	padding: 10px;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background: rgba(220, 40, 29, 1);
+	font-size: 20px;
+	border-radius: 20px;
+}
+.quest {
+	width: auto;
+	min-width: 400px;
+	border-radius: 8px;
+	padding: 0px 10px;
+	padding-bottom: 20px;
+	color: white;
+	position: relative;
+	display: flex;
+	flex-wrap:wrap;
+	margin-top: 10px;
+	background: rgba(4, 4, 4, 0.7);
+	box-shadow: inset 0 1px 1px rgba(176, 33, 23, 0.8), inset 0 -1px 0px rgba(176, 33, 23, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
+    background-image: -webkit-linear-gradient(#000000, #161617);
+    background-image: -o-linear-gradient(#000000, #161617);
+    background-image: linear-gradient(#000000, #161617);
+    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 -1px 0 #311d47;
+}
+.quest p{
+	margin-right: 20px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+
+}
+.quest p.ball{
+	text-align: center;
+	border-bottom: 2px solid rgba(220, 40, 29, 1);
+}
+
+.quest .theme{
+	
+}
+.quest .desc{
+	width: 100%;
+}
+.quest .ball{
+	
+}
+.quest a{
+	text-decoration: none;
+	color:white;
+	width: auto;
+	border: 2px solid rgba(220, 40, 29, 1);
+	padding: 10px 15px;
+	border-radius: 20px;
+	position: relative;
+	
+
+}
+.statisctic{
+	background-size: 24px 24px;
+	text-align: right;
+	width: auto;
+	height: 25px;
+	padding-left: 30px;
+	color: grey;
+	font-size: 14px;
+	line-height: 25px;
+	font-weight: bold;
+	position: absolute;
+}
+.comment{
+	background: url("./assets/img/grey_comment.png") no-repeat;
+	background-size: 24px 24px;
+	right:0;
+	bottom: 0;
+
+}
+.observ{
+	background: url("./assets/img/grey_observ.png") no-repeat;
+	background-size: 24px 24px;
+	right:70px;
+	bottom: 0;
+	
+
+}
+.desc:hover{
+	text-decoration: underline;
+}
+.disabled{
+	background: rgba(44, 44, 45, 0.2);
+	color: #696773;
+	box-shadow: inset 0 1px 1px rgba(127, 222, 239, 0.8), inset 0 -1px 0px rgba(127, 222, 239, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
+}
+.disabled p.ball{
+	background: rgba(44, 44, 45, 0.2);
+	color: #696773;
+	border-bottom: 2px solid #696773;
+}
+a.disabled-but{
+	border: 2px solid #696773;
+}

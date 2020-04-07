@@ -1,0 +1,25 @@
+.loader{
+	width:200px;
+	height: 2px;
+	background: black;
+	margin: 50px auto;
+	position: relative;
+	overflow: hidden;
+}
+.loader::before{
+	content: "";
+	width: 40px;
+	position: absolute;
+	height: 2px;
+	top: 0;
+	left: 0;
+	transform: translateX(-30px);    
+	background: red;
+	animation: shake 1s linear alternate infinite;
+}
+@keyframes shake {
+
+  100% {
+    transform: translateX(190px); 
+  }
+}

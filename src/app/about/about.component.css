@@ -1,0 +1,16 @@
+body{
+	background: #161617;
+}
+.about{
+	width: 700px;
+	height: auto;
+	margin: 20px auto;
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+}
+p.paraminfo{
+	color: #ccc;
+	width: auto;
+}
+

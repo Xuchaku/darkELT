@@ -1,0 +1,8 @@
+<div class="quest" [class.active]="quest.active" [class.disabled]="!quest.active">
+	<p class="theme">{{quest.theme}}</p>
+	<p class="ball">{{quest.price}}б</p>
+	<p class="desc">{{quest.description}}</p>
+	<a href="" class="answer" [class.disabled-but]="!quest.active" (click)="incObserv()">Ответить</a>
+	<p class="comment statisctic">{{quest.commentCount}}</p>
+	<p class="observ statisctic">{{quest.observCount}}</p>
+</div>

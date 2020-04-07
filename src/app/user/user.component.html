@@ -1,0 +1,8 @@
+<div class="auth-info">
+			<a href="" class="iconlink" [class.hidden]="user.isAuth">
+				<img src="{{user.avatarSrc}}" alt="" class="avatar">
+			</a>
+			<p class="name" [class.hidden]="user.isAuth">{{user.name}}</p>
+			<a  class="enter" (click)="authService.login()">Вход</a>
+			<a  routerLink="/registration" class="auth">Зарегистрироваться</a>
+</div>

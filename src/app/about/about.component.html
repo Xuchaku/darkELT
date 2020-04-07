@@ -1,0 +1,11 @@
+<app-header></app-header>
+<app-navigation></app-navigation>
+<div class="about" *ngIf="description!='' && authors!='';else waits">
+	<div class="content">
+		<p class="paraminfo">{{description}}</p>
+		<p class="paraminfo">{{authors}}</p>
+	</div>
+</div>
+<ng-template #waits>
+		<app-pre-loader></app-pre-loader>
+</ng-template>

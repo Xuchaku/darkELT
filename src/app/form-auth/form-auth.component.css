@@ -1,0 +1,103 @@
+body{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background: #131313;
+	
+}
+h3{
+	display: block;
+	margin: 50px auto;
+	width: 300px;
+	text-align: center;
+	color: #C4C4C4;
+	font-weight: bold;
+	font-size: 30px;
+}
+.registration, .entry{
+	max-width: 300px;
+	padding: 50px;
+	height: auto;
+	margin: -50px auto;
+	text-align: center;
+	position: relative;
+	color: white;
+	background: #131313;
+}
+.registration input, .entry input{
+	outline: none;
+	width: 100%;
+	height: 50px;
+	border: none;
+	font-weight: bold;
+	box-sizing: border-box;
+	padding-left: 20px;
+	box-sizing: border-box;
+	background-image: -webkit-linear-gradient(#000000, #161617);
+    background-image: -o-linear-gradient(#000000, #161617);
+    background-image: linear-gradient(#000000, #161617);
+	border-bottom: 2px solid #131313;
+	border-radius: 8px;
+	color: #808080;
+
+}
+.registration-submit{
+	display: block;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	right: 20px;
+	top: 112px;
+	border-radius: 100%;
+	background:  #161617;
+	border: 6px solid #131313;
+	text-decoration: none;
+	text-align: center;
+	line-height: 60px;
+	color: #424243;
+	font-size: 30px;
+	font-weight: bold;
+
+}
+.entry-submit{
+	display: block;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	right: 20px;
+	top: 65px;
+	border-radius: 100%;
+	background-image: -webkit-linear-gradient(#000000, #161617);
+    background-image: -o-linear-gradient(#000000, #161617);
+    background-image: linear-gradient(#000000, #161617);
+	border: 6px solid #424243;
+	text-decoration: none;
+	text-align: center;
+	line-height: 60px;
+	color: #424243;
+	font-size: 30px;
+	font-weight: bold;
+
+}
+.annotation{
+	display: block;
+	width: 300px;
+	margin: 0px auto;
+	color: #2B2B2C;
+	font-weight: bold;
+	text-align: left;
+
+}
+.annotation a{
+	color:#C4C4C4;
+}
+.wrapper-form{
+	height: 300px;
+	width: 500px;
+    margin: 0px auto;
+}
+.wrapper-form::before{
+	content: "";
+	width: 1px;
+	height: 1px;
+}

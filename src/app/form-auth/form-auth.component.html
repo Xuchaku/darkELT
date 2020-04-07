@@ -1,0 +1,12 @@
+<div class="wrapper-form">
+	<h3>Registration</h3>
+	<div class="registration">
+		<input type="text" class="user-info" placeholder="username" [(ngModel)]="authUser.nick">
+		<input type="text" class="user-info" placeholder="password" [(ngModel)]="authUser.password" >
+		<input type="text" class="user-info" placeholder="faculty" [(ngModel)]="authUser.faculty">
+		<input type="text" class="user-info" placeholder="mail"  [(ngModel)]="authUser.email">
+		<!-- <a href="" class="registration-submit" (click)="pushInToServer()">></a> -->
+		<button class="registration-submit" (click)="pushInToServer()">>></button>
+		<p class="annotation">Do you have an account? <a href="">Sign in</a></p>
+	</div>
+</div>

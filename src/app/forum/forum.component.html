@@ -1,0 +1,11 @@
+<app-header></app-header>
+<app-navigation></app-navigation>
+<section class="content">
+	<div class="main-content-forum">
+		<a href="#" class="add-quest" (click)="addQuest()">Задать вопрос</a>
+		<app-quest
+		 *ngFor="let quest of questArr.questArr;"
+		 [quest]="quest"
+		 ></app-quest>
+	</div>
+</section>
