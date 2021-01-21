@@ -2,24 +2,65 @@
 	<div class="user-info menu-user">
 		<a href="" class="user-link back"></a>
 		<p class="user-text">Информация</p>
-		<a href="" class="user-link close">X</a>
+		<a href="" class="user-link close"></a>
 	</div>
 	<div class="user-info media-user">
 		<img src="../../assets/img/avatar.jpg" alt="" class="user-img">
 		<button class="btn-user">Выбрать фото</button>
 	</div>
 	<div class="main-info">
-		<div class="user-info name">
-			Зенкин В.М
+		<div class="user-info icon hovered" (mouseenter)="controlBar.nick = !controlBar.nick" (mouseleave)="controlBar.nick = !controlBar.nick">
+			<input type="text" class="change-data" [style.display]="controlChangedElem.nick ? 'block' : 'none'" [(ngModel)]="userMutation.nick">
+			<p class="txt-info" [style.display]="!controlChangedElem.nick ? 'block' : 'none'">{{userMutation.nick}}</p>
+			<button class="change-info" [ngStyle]="{
+				display: controlBar.nick ? 'block' : 'none',
+				backgroundImage: !controlChangedElem.nick ? 'url(./../../assets/img/unlock@2x.png)' : 'url(./../../assets/img/lock@2x.png)'
+		}" (click)="controlChangedElem.nick = !controlChangedElem.nick"></button>
 		</div>
-		<div class="user-info faculty">
-			ФКТИ
+		<!-- <div class="user-info icon hovered"  (mouseenter)="controlBar.password = !controlBar.password" (mouseleave)="controlBar.password = !controlBar.password">
+			<input type="text" class="change-data" [style.display]="controlChangedElem.password ? 'block' : 'none'" [(ngModel)]="userMutation.password">
+			<p class="txt-info" [style.display]="!controlChangedElem.password ? 'block' : 'none'">{{userMutation.password}}</p>
+			<button class="change-info" [ngStyle]="{
+				display: controlBar.password ? 'block' : 'none',
+				backgroundImage: !controlChangedElem.password ? 'url(./../../assets/img/unlock@2x.png)' : 'url(./../../assets/img/lock@2x.png)'
+		}"  (click)="controlChangedElem.password = !controlChangedElem.password"></button>
+		</div> -->
+		<div class="user-info icon hovered"  (mouseenter)="controlBar.faculty=!controlBar.faculty" (mouseleave)="controlBar.faculty=!controlBar.faculty">
+			<input type="text" class="change-data" [style.display]="controlChangedElem.faculty ? 'block' : 'none'" [(ngModel)]="userMutation.faculty">
+			<p class="txt-info" [style.display]="!controlChangedElem.faculty ? 'block' : 'none'">{{userMutation.faculty}}</p>
+			<button class="change-info" [ngStyle]="{
+				display: controlBar.faculty ? 'block' : 'none',
+				backgroundImage: !controlChangedElem.faculty ? 'url(./../../assets/img/unlock@2x.png)' : 'url(./../../assets/img/lock@2x.png)'
+		}" (click)="controlChangedElem.faculty = !controlChangedElem.faculty"></button>
 		</div>
-		<div class="user-info premium">
-			Active
+		<div class="user-info icon hovered"  (mouseenter)="controlBar.email = !controlBar.email" (mouseleave)="controlBar.email = !controlBar.email">
+			<input type="text" class="change-data" [style.display]="controlChangedElem.email ? 'block' : 'none'" [(ngModel)]="userMutation.email">
+			<p class="txt-info" [style.display]="!controlChangedElem.email ? 'block' : 'none'">{{userMutation.email}}</p>
+			<button class="change-info"   (click)="controlChangedElem.email = !controlChangedElem.email" [ngStyle]="{
+				display: controlBar.email ? 'block' : 'none',
+				backgroundImage: !controlChangedElem.email ? 'url(./../../assets/img/unlock@2x.png)' : 'url(./../../assets/img/lock@2x.png)'
+		}"></button>
+		</div>
+		<div class="user-info icon">
+			<p class="txt-info">{{userMutation.points}}</p>
+		</div>
+		<div class="user-info icon">
+			<p class="txt-info">{{userMutation.subscribed}}</p>
 		</div>
 	</div>
-	<div class="user-info other">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nesciunt officiis, iusto explicabo, minima atque ullam, eaque vero inventore suscipit, aperiam blanditiis. Vel minus id in a, qui eaque beatae.
+	<div class="user-info icon hovered" (mouseenter)="controlBar.additionalInfo = !controlBar.additionalInfo" (mouseleave)="controlBar.additionalInfo = !controlBar.additionalInfo">
+		<input type="text" class="change-data" [style.display]="controlChangedElem.additionalInfo ? 'block' : 'none'" [(ngModel)]="userMutation.additionalInfo">
+			<p class="txt-info" [style.display]="!controlChangedElem.additionalInfo ? 'block' : 'none'">{{userMutation.additionalInfo}}</p>
+			<button class="change-info"   (click)="controlChangedElem.additionalInfo = !controlChangedElem.additionalInfo" [ngStyle]="{
+				display: controlBar.additionalInfo ? 'block' : 'none',
+				backgroundImage: !controlChangedElem.additionalInfo ? 'url(./../../assets/img/unlock@2x.png)' : 'url(./../../assets/img/lock@2x.png)'
+		}"></button>
+	</div>
+	<!-- <a  class="enter" >Выход</a> -->
+	<div class="user-info media-user">
+		<button class="saved" (click)="authService.logout()">Выход</button>
+	</div> 
+	<div class="user-info media-user">
+		<button class="saved" (click)="updateData()">Сохранить</button>
 	</div>
 </div>

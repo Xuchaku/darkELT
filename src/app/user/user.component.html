@@ -1,8 +1,8 @@
 <div class="auth-info">
-			<a href="" class="iconlink" [class.hidden]="user.isAuth">
-				<img src="{{user.avatarSrc}}" alt="" class="avatar">
+			<a href="" routerLink="/user" class="iconlink" *ngIf="authService.isAuth" >
+				<img src="" alt="" class="avatar">ИНФОРМАЦИЯ
 			</a>
-			<p class="name" [class.hidden]="user.isAuth">{{user.name}}</p>
-			<a  class="enter" (click)="authService.login()">Вход</a>
-			<a  routerLink="/registration" class="auth">Зарегистрироваться</a>
+			<p class="name" *ngIf="authService.isAuth">{{authService.user.nick}}</p>
+			<a  class="enter" routerLink="/login" *ngIf="!authService.isAuth">Вход</a>
+			<a  routerLink="/registration" class="auth" *ngIf="!authService.isAuth">Зарегистрироваться</a>
 </div>

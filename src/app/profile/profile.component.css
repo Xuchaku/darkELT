@@ -17,11 +17,18 @@
 a.user-link{
 	text-decoration: none;
 	/*color: #E0DFD5;*/
-	background: url("./../../assets/img/arrow-left@2x.png") no-repeat;
+	
 	background-size: 36px 36px;
 	background-position: 12px 6px;
 
 }
+a.back{
+	background: url("./../../assets/img/arrow-left@2x.png") no-repeat;
+}
+a.close{
+	background: url("./../../assets/img/x-octagon@2x.png") no-repeat;
+}
+
 .menu-user{
 
 	display: flex;
@@ -73,8 +80,8 @@ a.close{
 	padding: 10px 15px;
 	margin: 0 auto;
 }
-.name, .faculty, .premium, .other{
-	text-align: left;
+.icon{
+	text-align:. left;
 	padding-top: 20px;
 	padding-bottom:20px;
 	position: relative;
@@ -82,7 +89,7 @@ a.close{
 .main-info{
 	margin-bottom: 20px;
 }
-.name::after{
+.icon::after{
 	content: "";
 	display: block;
 	position: absolute;
@@ -94,4 +101,37 @@ a.close{
 	top: 12px;
 	left: 20px;
 	
+}
+p.txt-info{
+	padding: 0;
+	margin: 0;
+	overflow:hidden;
+}
+.change-info{
+	display: none;
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top:12px;
+	cursor: pointer;
+	outline: none;
+	background: url(./../../assets/img/unlock@2x.png) no-repeat;
+	background-size: 36px 36px;
+	background-position: 0 0;
+	/*border: 2px solid rgba(0, 0, 0, 0.4);*/
+	border: none;
+	border-radius: 5px;
+	right: 20px;
+}
+.hovered:hover{
+	background: #363839;
+
+}
+input.change-data{
+	background: #464849;
+	border: none;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+	outline: none;
+	padding: 5px 15px;
+	display: none;
 }

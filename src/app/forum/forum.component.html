@@ -2,10 +2,12 @@
 <app-navigation></app-navigation>
 <section class="content">
 	<div class="main-content-forum">
-		<a href="#" class="add-quest" (click)="addQuest()">Задать вопрос</a>
+		<a href="#" class="add-quest" [routerLink]="['/','addquest']" (click)="addQuest()" *ngIf="authService.isAuth">Задать вопрос</a>
 		<app-quest
-		 *ngFor="let quest of questArr.questArr;"
+		 *ngFor="let quest of serviceStateQuest.questArr;"
 		 [quest]="quest"
 		 ></app-quest>
+		 <router-outlet></router-outlet>
 	</div>
+	
 </section>

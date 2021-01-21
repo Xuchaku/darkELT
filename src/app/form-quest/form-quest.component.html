@@ -1,0 +1,11 @@
+<div class="wrapper-form">
+	<label for="">Тема</label>
+	<input type="text" [(ngModel)]="quest.theme">
+	<label for="">Вопрос</label>
+	<input name="" id="" cols="30" rows="10" [(ngModel)]="quest.question">
+	<label class="ptsinfo" for="">Количество очков</label>
+	<label class="ptsinfo">Доступно: 35</label>
+	<input class="ptsin" type="text" [(ngModel)]="quest.price">
+	<button type="submit" (click)="pushInServer()">Отправить</button>
+</div>
+
